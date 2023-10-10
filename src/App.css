@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.App {
+  position: relative;
+}
+.content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.cellList {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.column {
+  box-shadow: 0px 0px 5px rgb(193, 193, 193);
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.cell {
+  width: 250px;
+  min-height: 100px;
+  padding: 15px;
+  padding-bottom: 50px;
+  cursor: pointer;
+  border: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgb(57, 57, 57);
+  position: relative;
+}
+
+.deletecell {
+  display: block;
+  position: absolute;
+  padding: 10px;
+  border: 1px dotted rgba(0, 0, 0, 0.258);
+  right: 15px;
+  bottom: 15px;
+}
+
+.newCellBtn {
+  width: 45px;
+  height: 45px;
+  border: 1px dotted rgb(85, 85, 85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.newCellBtn:hover {
+  background-color: rgba(0, 0, 0, 0.147);
+}
+
+.modal {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.16);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+}
+
+.modal__inner {
+  padding: 20px;
+  box-shadow: 0px 0px 5px rgb(126, 126, 126);
+  background-color: white;
+  border-radius: 10px;
+}
+
+form {
+  margin-top: 35px;
+  padding: 10px;
+}
+
+.btn {
+  background-color: black;
+  padding: 10px 15px;
+  border: none;
+  color: white;
+}
+
+.input__newAnimal {
+  padding: 10px 15px;
+  border: none;
+  border-bottom: 1px solid rgb(109, 109, 109);
+}
+
+.animal {
+  background-color: black;
+  color: white;
+  margin-top: 10px;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.animal:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgb(120, 120, 120);
+}
+
+.span-error-message {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 15px;
+  color: white;
+  background-color: red;
+}
