@@ -1,5 +1,5 @@
-import React from "react";
-import Cell from "./Cell";
+import React from 'react';
+import Cell from './Cell';
 
 const CellList = ({
     cells,
@@ -19,10 +19,10 @@ const CellList = ({
 
 
     return (
-        <ul className="cellList">
+        <ul className='cellList'>
             {
                 cells.length === 0 ?
-                    <p>Пустой лист</p> : ""
+                    <p>Пустой лист</p> : ''
             }
             {
                 cells.map(cell => (
@@ -38,7 +38,7 @@ const CellList = ({
                     />
                 ))
             }
-            <li onClick={onclickNewCellHandler} className="newCellBtn">+</li>
+            <li onClick={onclickNewCellHandler} className='newCellBtn'>+</li>
         </ul>
     )
 }

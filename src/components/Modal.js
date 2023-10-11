@@ -1,4 +1,4 @@
-import { React } from "react"
+import { React } from 'react'
 
 export default function Modal({
     animals,
@@ -15,8 +15,8 @@ export default function Modal({
 
 
     return (
-        <div className="modal" onClick={() => setIsShowModal(false)}>
-            <div className="modal__inner" onClick={(e) => e.stopPropagation()}>
+        <div className='modal' onClick={() => setIsShowModal(false)}>
+            <div className='modal__inner' onClick={(e) => e.stopPropagation()}>
                 <select onChange={(e) => { changeHandler(e) }}>
                     <option>Выберите из списка</option>
                     {

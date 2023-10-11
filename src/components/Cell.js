@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 
 const Cell = ({
@@ -27,7 +27,7 @@ const Cell = ({
 
 
     return (
-        <li className="cell"
+        <li className='cell'
             onDragEnter={() => dragEnterHadler(cell.id)}
             onDragOver={(e) => e.preventDefault()}
             onDrop={() => ondropHandler()}
@@ -41,7 +41,7 @@ const Cell = ({
                     <div
                         key={animal.id}
                         draggable
-                        className="animal"
+                        className='animal'
                         onDragStart={() => dragStart(animal.id)}
                     >{animal.name}</div>
                 ))
@@ -49,7 +49,7 @@ const Cell = ({
             <span onClick={(e) => {
                 e.stopPropagation()
                 onclickDeleteCell(cell.id)
-            }} className="deletecell">x</span>
+            }} className='deletecell'>x</span>
         </li>
     )
 }

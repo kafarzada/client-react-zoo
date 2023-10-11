@@ -1,6 +1,6 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import { fetchCells, fetchAnimals, fetchNewAnimal, fetchForwardAnimal, fetchNewCell, fetchDeleteCell } from "./api/client"
+import { fetchCells, fetchAnimals, fetchNewAnimal, fetchForwardAnimal, fetchNewCell, fetchDeleteCell } from './api/client'
 import CellList from './components/CellList';
 import Modal from './components/Modal';
 
@@ -95,7 +95,7 @@ function App() {
   return (
     <div className="App">
       {
-        error ? <span className='span-error-message'>Ошибка при получении данных: <br /> {error}</span> : ""
+        error ? <span className='span-error-message'>Ошибка при получении данных: <br /> {error}</span> : ''
       }
       <div className='content'>
         {
@@ -105,7 +105,7 @@ function App() {
             currentAnimal={currentAnimal}
             setIsShowModal={setIsShowModal}
             SelectCell={SelectCell}
-          /> : ""
+          /> : ''
         }
         <div className='column main-content'>
           <CellList
@@ -135,7 +135,7 @@ function App() {
           </div>
           <form>
             <input className='input__newAnimal' type='text' required value={name} onChange={(e) => setname(e.target.value)} />
-            <input className='btn' type={"submit"} onClick={sendNewAnimal} value={"Добавить"} />
+            <input className='btn' type={'submit'} onClick={sendNewAnimal} value={'Добавить'} />
           </form>
         </div>
       </div>
