@@ -21,19 +21,14 @@ function App() {
   let [error, setError] = useState("");
 
   useEffect(() => {
-    fetchCells()
-      .then((cells) => setCells(cells))
-      .catch((e) => {
-        setError(e.message);
-      });
-
-    fetchAnimals()
-      .then((animals) => {
-        setAnimals(animals);
+    Promise.all([fetchCells(), fetchAnimals()])
+      .then(data => {
+        setCells(data[0])
+        setAnimals(data[1])
       })
-      .catch((e) => {
-        setError(e.message);
-      });
+      .catch(error => {
+        setError(error.message)
+      })
   }, []);
 
   const sendNewAnimal = async (e) => {
